@@ -5,4 +5,4 @@ services:
 before_install:
    - docker build -t subash/docker-react -f Dockerfile.dev .    
 script:
-  - docker run -e CI=true subash/docker-react npm run test  
+  - docker run -e CI=true subash/docker-react npm run test -- --coverage  
